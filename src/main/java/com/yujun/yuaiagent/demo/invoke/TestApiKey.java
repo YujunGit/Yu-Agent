@@ -1,5 +1,5 @@
 package com.yujun.yuaiagent.demo.invoke;
 
 public interface TestApiKey  {
-    String API_KEY = "sk--test";
+    String API_KEY = "sk--test--test";
 }
