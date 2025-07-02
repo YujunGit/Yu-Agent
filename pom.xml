@@ -75,6 +75,12 @@
             <artifactId>langchain4j-community-dashscope</artifactId>
             <version>1.0.0-beta5</version>
         </dependency>
+        <!-- Structured Output Support-->
+        <dependency>
+            <groupId>com.github.victools</groupId>
+            <artifactId>jsonschema-generator</artifactId>
+            <version>4.38.0</version>
+        </dependency>
         <!-- https://java2ai.com/docs/dev/models/ollama -->
         <dependency>
             <groupId>org.springframework.ai</groupId>

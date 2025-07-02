@@ -7,7 +7,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.UUID;
 
-import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class LoveAppTest {
 
@@ -15,7 +14,7 @@ class LoveAppTest {
     private LoveApp loveApp;
 
     @Test
-    void testChat() {
+    void testDoChat() {
         String chatId = UUID.randomUUID().toString();
 
         String messaage = "Hi, I'm Yujun! 我现在处于恋爱中。";
@@ -30,5 +29,15 @@ class LoveAppTest {
         answer = loveApp.doChat(messaage, chatId);
         Assertions.assertNotNull(answer);
 
+    }
+
+
+    @Test
+    void testDoChatWithReport() {
+        String chatId = UUID.randomUUID().toString();
+        String message = "你好，我是Yujun，一名程序员，我现在人在中国，但女朋友在外国，我们有12个小时的时差，因为一些原因，我俩要半年以上都见不到面，我该怎么做。";
+        LoveApp.LoveReport loveReport = loveApp.doChatWithReport(message, chatId);
+
+        Assertions.assertNotNull(loveReport);
     }
 }
